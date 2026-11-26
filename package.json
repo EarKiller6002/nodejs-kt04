@@ -1,0 +1,31 @@
+{
+  "name": "EarKiller6002's Blog Platform REST API version 2.0",
+  "version": "2.0.0",
+  "description": "It's my upgraded Blog Platform REST API with Prisma ORM",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "prisma:migrate": "npx prisma migrate dev --name init",
+    "prisma:generate": "npx prisma generate",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^8.0.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "jest": "^29.7.0",
+    "prisma": "^5.22.0",
+    "supertest": "^7.0.0"
+  }
+}
